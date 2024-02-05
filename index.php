@@ -1,3 +1,19 @@
+<?php 
+
+include('./config/db.php'); 
+
+$sql = "SELECT name,favorite_foods,img_src FROM ducks";
+
+$result = mysqli_query($conn,$sql);
+$ducks = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+mysqli_free_result($result);
+mysqli_close($conn);
+
+print_r($ducks);
+
+?>
+
 <?php include('components/head.php'); ?>
 <?php include('components/nav.php'); ?>
 <main>
