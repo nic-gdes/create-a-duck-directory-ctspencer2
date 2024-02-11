@@ -22,7 +22,7 @@ print_r($ducks);
         <div class="grid">
             <!-- Placeholder for ducks; replace with dynamic content later -->
             <div class="duck-item">
-                <img src="./assets/images/placeholder-duck.jpg" alt="Duck Name">
+                <img src="./assets/images/daffy.jpg" alt="Duck Name">
                 <h2>Duck Name</h2>
                 <ul>
                     <li>Favorite Food 1</li>
@@ -30,7 +30,7 @@ print_r($ducks);
                 </ul>
             </div>
             <div class="duck-item">
-                <img src="./assets/images/placeholder-duck.jpg" alt="Duck Name">
+                <img src="./assets/images/howard.jpg" alt="Duck Name">
                 <h2>Duck Name</h2>
                 <ul>
                     <li>Favorite Food 1</li>
@@ -38,7 +38,7 @@ print_r($ducks);
                 </ul>
             </div>
             <div class="duck-item">
-                <img src="./assets/images/placeholder-duck.jpg" alt="Duck Name">
+                <img src="./assets/images/rubber.jpg" alt="Duck Name">
                 <h2>Duck Name</h2>
                 <ul>
                     <li>Favorite Food 1</li>

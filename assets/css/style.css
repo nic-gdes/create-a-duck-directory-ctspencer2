@@ -1,7 +1,68 @@
+* {
+  list-style-type: none;
+  text-decoration: none;
+  color: black;
+  padding: 0;
+}
+
 html, body{
     margin: 0;
     padding: 0;
-    background-color: black;
+    background-color: rgb(224, 224, 224);
+    width: 100%;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
   }
 
-  
+nav {
+  background-color: yellowgreen;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+}
+
+/* Main Section */
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+main section {
+  width: 90%;
+}
+
+/* Cards */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.duck-item {
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.duck-item ul {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.duck-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
