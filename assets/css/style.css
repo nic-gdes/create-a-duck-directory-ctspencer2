@@ -3,6 +3,8 @@
   text-decoration: none;
   color: black;
   padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 html, body{
@@ -12,10 +14,18 @@ html, body{
     width: 100%;
     display: block;
     font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
   }
 
 nav {
-  background-color: yellowgreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 24px;
+}
+
+nav img {
+  max-width: 80px;
   display: flex;
   justify-content: center;
 }
@@ -29,13 +39,25 @@ nav ul {
 
 /* Main Section */
 main {
-  width: 100%;
   display: flex;
   justify-content: center;
 }
 
 main section {
   width: 90%;
+}
+
+/* Hero */
+#hero {
+  width: 100%;
+  background: linear-gradient(black, rgba(0, 0, 0, 0.45)), url(/assets/images/pond.jpg) no-repeat center / cover;
+  height: 45%;
+  color: white;
+  position: relative;
+}
+
+#hero .container .info h1 {
+  color: white;
 }
 
 /* Cards */
@@ -65,4 +87,9 @@ main section {
   height: 100%;
   object-fit: cover;
   overflow: hidden;
+}
+
+/* Footer */
+footer {
+  display: flex;
 }

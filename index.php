@@ -16,33 +16,39 @@ print_r($ducks);
 
 <?php include('components/head.php'); ?>
 <?php include('components/nav.php'); ?>
+<div id="hero">
+    <div class="container">
+        <div class="info">
+            <h1>Welcome to the Duck Directory</h1>
+        </div>
+    </div>
+</div>
 <main>
     <section>
-        <h1>Welcome to the Duck Directory</h1>
         <div class="grid">
             <!-- Placeholder for ducks; replace with dynamic content later -->
             <div class="duck-item">
                 <img src="./assets/images/daffy.jpg" alt="Duck Name">
-                <h2>Duck Name</h2>
+                <h2>Daffy</h2>
                 <ul>
-                    <li>Favorite Food 1</li>
-                    <li>Favorite Food 2</li>
+                    <li>Chicken Fried Rice</li>
+                    <li>Sushi</li>
                 </ul>
             </div>
             <div class="duck-item">
                 <img src="./assets/images/howard.jpg" alt="Duck Name">
-                <h2>Duck Name</h2>
+                <h2>Howard</h2>
                 <ul>
-                    <li>Favorite Food 1</li>
-                    <li>Favorite Food 2</li>
+                    <li>Double Cheeseburger</li>
+                    <li>Beer</li>
                 </ul>
             </div>
             <div class="duck-item">
                 <img src="./assets/images/rubber.jpg" alt="Duck Name">
-                <h2>Duck Name</h2>
+                <h2>Rubber</h2>
                 <ul>
-                    <li>Favorite Food 1</li>
-                    <li>Favorite Food 2</li>
+                    <li>Dawn Dish Soap</li>
+                    <li>Spaghetti</li>
                 </ul>
             </div>
             
