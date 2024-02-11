@@ -22,6 +22,7 @@ nav {
   justify-content: center;
   align-items: center;
   padding-left: 24px;
+  background-color: cornflowerblue;
 }
 
 nav img {
@@ -41,6 +42,7 @@ nav ul {
 main {
   display: flex;
   justify-content: center;
+  margin-bottom: 10%;
 }
 
 main section {
@@ -54,11 +56,21 @@ main section {
   height: 45%;
   color: white;
   position: relative;
+  margin-bottom: 10%;
 }
 
 #hero .container .info h1 {
   color: white;
 }
+
+#hero .container {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
 
 /* Cards */
 .grid {
@@ -92,4 +104,6 @@ main section {
 /* Footer */
 footer {
   display: flex;
+  background-color: cornflowerblue;
+  justify-content: center;
 }
