@@ -51,8 +51,6 @@ print_r($ducks);
                     <li>Spaghetti</li>
                 </ul>
             </div>
-            
-            <!-- Repeat for each duck -->
         </div>
     </section>
 </main>
