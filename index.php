@@ -1,16 +1,61 @@
-<?php 
+<?php
 
-include('./config/db.php'); 
+// Connect to the database using mysqli
+$conn = mysqli_connect("db", "db", "db", "db");
 
-$sql = "SELECT name,favorite_foods,img_src FROM ducks";
+// Check for a connection error
+if (mysqli_connect_errno()) {
+    // If there is an error, display it and exit the script
+    echo "Connection error: " . mysqli_connect_error();
+    exit();
+}
 
-$result = mysqli_query($conn,$sql);
-$ducks = mysqli_fetch_all($result, MYSQLI_ASSOC);
+// Define the SQL query
+$sql = "SELECT * FROM ducks";
 
+// Execute the query and store the result
+$result = mysqli_query($conn, $sql);
+
+// Convert the result into an associative array
+$data = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+// Iterate over the data array and print each record (for demonstration purposes)
+foreach ($data as $row) {
+    echo "<pre>";
+    print_r($row);
+    echo "</pre>";
+}
+
+// Free up the memory used by the result set
 mysqli_free_result($result);
+
+// Close the database connection
 mysqli_close($conn);
 
-print_r($ducks);
+// Always check if $result is not false and if $ducks is not empty before using it
+if ($result === false || empty($ducks)) {
+    // Handle error or set $ducks to an empty array to avoid the warnings
+    $ducks = [];
+}
+
+print_r($data);
+
+?>
+
+
+<?php 
+
+// include('./config/db.php'); 
+
+// $sql = "SELECT name,favorite_foods,img_src FROM ducks";
+
+// $result = mysqli_query($conn,$sql);
+// $ducks = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+// mysqli_free_result($result);
+// mysqli_close($conn);
+
+// print_r($ducks);
 
 ?>
 
@@ -26,10 +71,11 @@ print_r($ducks);
 <main>
     <section>
         <div class="grid">
+        <?php foreach ($ducks as $duck) { ?>
             <!-- Placeholder for ducks; replace with dynamic content later -->
             <div class="duck-item">
-                <img src="./assets/images/daffy.jpg" alt="Duck Name">
-                <h2>Daffy</h2>
+                <img src="./assets/images/daffy.jpg" alt="<?php echo htmlspecialchars($duck["img_src"]); ?>">
+                <h2><?php echo htmlspecialchars($duck["name"]); ?></h2>
                 <ul>
                     <li>Chicken Fried Rice</li>
                     <li>Sushi</li>
@@ -51,6 +97,7 @@ print_r($ducks);
                     <li>Spaghetti</li>
                 </ul>
             </div>
+        <?php } ?>
         </div>
     </section>
 </main>
